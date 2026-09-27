@@ -4,13 +4,13 @@ import './App.css'
 const categories = ['Anime', 'Gaming', 'Movies', 'TV Shows', 'K-Pop', 'Comics', 'Manga']
 
 const categoryInfo = {
-  Anime: { accent: '#d26bff', description: 'Hand-drawn worlds, impossible stakes.', hero: './assets/anime-aot.jpg', genres: ['Action', 'Adventure', 'Comedy', 'Dark Fantasy', 'Drama', 'Fantasy', 'Film', 'Historical', 'Mystery', 'Noir', 'Sci-Fi', 'Shonen', 'Space Western', 'Supernatural', 'Thriller', 'Romance'] },
-  Manga: { accent: '#aab2c0', description: 'Panels, pages, and worlds that stay with you.', hero: './assets/anime-vinland.jpg', genres: ['Action', 'Adventure', 'Comedy', 'Drama', 'Fantasy', 'Horror', 'Mystery', 'Romance', 'Sci-Fi', 'Shonen'] },
-  Comics: { accent: '#ff7aa8', description: 'Heroes, antiheroes, and stories in every shade.', hero: './assets/monolith-comics.jpg', genres: ['Action', 'Adventure', 'Comedy', 'Crime', 'Drama', 'Fantasy', 'Horror', 'Mystery', 'Sci-Fi'] },
-  Gaming: { accent: '#62d7b1', description: 'Worlds to play, explore, master, and remember.', hero: './assets/monolith-gaming.jpg', genres: ['Action', 'Adventure', 'RPG', 'Strategy', 'Indie', 'Horror', 'Racing', 'Sports', 'Simulation'] },
-  Movies: { accent: '#e6b354', description: 'Frames, soundtracks, and worlds on the big screen.', hero: './assets/monolith-movies.jpg', genres: ['Action', 'Adventure', 'Comedy', 'Crime', 'Drama', 'Fantasy', 'Horror', 'Romance', 'Sci-Fi', 'Thriller'] },
-  'TV Shows': { accent: '#65b9e8', description: 'Stories built for the next episode.', hero: './assets/tv-lastofus.jpg', genres: ['Animation', 'Comedy', 'Crime', 'Drama', 'Fantasy', 'Historical', 'Horror', 'Mystery', 'Post-Apocalyptic', 'Sci-Fi', 'Surreal', 'Thriller'] },
-  'K-Pop': { accent: '#ea73b5', description: 'Artists, eras, stages, and songs on repeat.', hero: './assets/kpop-a.jpg', genres: ['Girl Group', 'Boy Group', 'Solo', 'R&B', 'Hip-Hop', 'Ballad', 'Dance', 'Rookie'] },
+  Anime: { accent: '#d26bff', description: 'Hand-drawn worlds, impossible stakes.', hero: './assets/home-anime.jpg', genres: ['Action', 'Adventure', 'Comedy', 'Dark Fantasy', 'Drama', 'Fantasy', 'Film', 'Historical', 'Mystery', 'Noir', 'Sci-Fi', 'Shonen', 'Space Western', 'Supernatural', 'Thriller', 'Romance'] },
+  Manga: { accent: '#aab2c0', description: 'Panels, pages, and worlds that stay with you.', hero: './assets/home-manga.jpg', genres: ['Action', 'Adventure', 'Comedy', 'Drama', 'Fantasy', 'Horror', 'Mystery', 'Romance', 'Sci-Fi', 'Shonen'] },
+  Comics: { accent: '#ff7aa8', description: 'Heroes, antiheroes, and stories in every shade.', hero: './assets/home-comics.jpg', genres: ['Action', 'Adventure', 'Comedy', 'Crime', 'Drama', 'Fantasy', 'Horror', 'Mystery', 'Sci-Fi'] },
+  Gaming: { accent: '#62d7b1', description: 'Worlds to play, explore, master, and remember.', hero: './assets/home-gaming.jpg', genres: ['Action', 'Adventure', 'RPG', 'Strategy', 'Indie', 'Horror', 'Racing', 'Sports', 'Simulation'] },
+  Movies: { accent: '#e6b354', description: 'Frames, soundtracks, and worlds on the big screen.', hero: './assets/home-movies.jpg', genres: ['Action', 'Adventure', 'Comedy', 'Crime', 'Drama', 'Fantasy', 'Horror', 'Romance', 'Sci-Fi', 'Thriller'] },
+  'TV Shows': { accent: '#65b9e8', description: 'Stories built for the next episode.', hero: './assets/home-tv.jpg', genres: ['Animation', 'Comedy', 'Crime', 'Drama', 'Fantasy', 'Historical', 'Horror', 'Mystery', 'Post-Apocalyptic', 'Sci-Fi', 'Surreal', 'Thriller'] },
+  'K-Pop': { accent: '#ea73b5', description: 'Artists, eras, stages, and songs on repeat.', hero: './assets/home-kpop.jpg', genres: ['Girl Group', 'Boy Group', 'Solo', 'R&B', 'Hip-Hop', 'Ballad', 'Dance', 'Rookie'] },
 }
 
 const imageMap = {
@@ -18,9 +18,9 @@ const imageMap = {
   'TV Shows': ['./assets/tv-arcane.jpg', './assets/tv-bcs.jpg', './assets/tv-breakingbad.jpg', './assets/tv-chernobyl.jpg', './assets/tv-fleabag.jpg', './assets/tv-severance.jpg', './assets/tv-stranger.jpg', './assets/tv-lastofus.jpg', './assets/tv-wire.jpg', './assets/tv-twinpeaks.jpg'],
   'K-Pop': ['./assets/kpop-a.jpg', './assets/kpop-b.jpg', './assets/kpop-c.jpg', './assets/kpop-a.jpg', './assets/kpop-b.jpg', './assets/kpop-c.jpg'],
   Manga: ['./assets/anime-aot.jpg', './assets/anime-vinland.jpg', './assets/anime-onepunch.jpg', './assets/anime-jjk.jpg', './assets/anime-fmab.jpg', './assets/anime-steins.jpg'],
-  Comics: ['./assets/monolith-comics.jpg', './assets/anime-cowboy.jpg', './assets/monolith-comics.jpg', './assets/kpop-c.jpg', './assets/monolith-comics.jpg'],
-  Gaming: ['./assets/monolith-gaming.jpg', './assets/kpop-b.jpg', './assets/monolith-gaming.jpg', './assets/generic.jpg', './assets/monolith-gaming.jpg'],
-  Movies: ['./assets/monolith-movies.jpg', './assets/anime-spirited.jpg', './assets/monolith-movies.jpg', './assets/generic.jpg', './assets/monolith-movies.jpg'],
+  Comics: ['./assets/home-comics.jpg', './assets/anime-cowboy.jpg', './assets/home-comics.jpg', './assets/kpop-c.jpg', './assets/home-comics.jpg'],
+  Gaming: ['./assets/home-gaming.jpg', './assets/home-gaming.jpg', './assets/home-gaming.jpg', './assets/generic.jpg', './assets/home-gaming.jpg'],
+  Movies: ['./assets/home-movies.jpg', './assets/anime-spirited.jpg', './assets/home-movies.jpg', './assets/generic.jpg', './assets/home-movies.jpg'],
 }
 
 const seeded = {
@@ -154,20 +154,61 @@ function useClock() {
   return date
 }
 
-function Shatter({ image, onDone }) {
-  const pieces = useMemo(() => Array.from({ length: 320 }, (_, i) => ({
-    i,
-    dx: `${(Math.random() - 0.5) * 120}vw`,
-    dy: `${(Math.random() - 0.5) * 100}vh`,
-    rot: `${(Math.random() - 0.5) * 1200}deg`,
-    x: `${(i % 20) * 5.05}%`,
-    y: `${Math.floor(i / 20) * 6.3}%`,
-  })), [])
+function Shatter({ image, category, onDone }) {
+  const pieces = useMemo(() => {
+    const cols = 24
+    const rows = 18
+    return Array.from({ length: cols * rows }, (_, i) => {
+      const col = i % cols
+      const row = Math.floor(i / cols)
+      const angle = Math.atan2(row - (rows - 1) / 2, col - (cols - 1) / 2)
+      const distance = 18 + Math.random() * 42
+      const dx = Math.cos(angle) * distance + (Math.random() - 0.5) * 16
+      const dy = Math.sin(angle) * distance + (Math.random() - 0.5) * 18
+      return {
+        i,
+        col,
+        row,
+        dx: `${dx}vw`,
+        dy: `${dy}vh`,
+        rot: `${(Math.random() - 0.5) * 720}deg`,
+        delay: `${Math.random() * 100}ms`,
+      }
+    })
+  }, [])
+
   useEffect(() => {
-    const timer = setTimeout(onDone, 900)
+    const timer = setTimeout(onDone, 1120)
     return () => clearTimeout(timer)
   }, [onDone])
-  return <div className="shatter-layer">{pieces.map((piece) => <span key={piece.i} className="shard" style={{ left: piece.x, top: piece.y, backgroundImage: `url(${image})`, backgroundSize: '2000% 1600%', backgroundPosition: `${(piece.i % 20) / 19 * 100}% ${Math.floor(piece.i / 20) / 15 * 100}%`, '--dx': piece.dx, '--dy': piece.dy, '--rot': piece.rot }} />)}</div>
+
+  return <div className="shatter-layer">
+    <div className="shatter-backdrop" />
+    <div className="shatter-focus" aria-hidden="true">
+      <div className="shatter-card-underlay" style={{ backgroundImage: `url(${image})` }} />
+      <div className="shatter-card-label">{category}</div>
+      <div className="shatter-shards">
+        {pieces.map((piece) => <span
+          key={piece.i}
+          className="shard"
+          style={{
+            left: `${piece.col * (100 / 24)}%`,
+            top: `${piece.row * (100 / 18)}%`,
+            width: `${100 / 24 + 0.2}%`,
+            height: `${100 / 18 + 0.2}%`,
+            backgroundImage: `url(${image})`,
+            backgroundSize: '2400% 1800%',
+            backgroundPosition: `${piece.col / 23 * 100}% ${piece.row / 17 * 100}%`,
+            '--dx': piece.dx,
+            '--dy': piece.dy,
+            '--rot': piece.rot,
+            animationDelay: piece.delay,
+          }}
+        />)}
+      </div>
+      <div className="shatter-flash" />
+    </div>
+  </div>
 }
 
 function Home({ onOpen, favorites, toggleFavorite }) {
@@ -202,11 +243,15 @@ function Home({ onOpen, favorites, toggleFavorite }) {
         ref={stageRef}
         onWheel={(event) => { event.preventDefault(); move(event.deltaY > 0 ? 1 : -1) }}
         onPointerDown={(event) => {
-          if (event.target.closest('.monolith-button')) return
+          if (event.target.closest('.monolith-button') || event.target.closest('.category-pill')) return
           dragStart.current = event.clientX
           event.currentTarget.setPointerCapture?.(event.pointerId)
         }}
         onPointerUp={(event) => {
+          if (event.target.closest('.monolith-button') || event.target.closest('.category-pill')) {
+            dragStart.current = null
+            return
+          }
           if (dragStart.current === null) return
           const dx = event.clientX - dragStart.current
           if (Math.abs(dx) > 35) move(dx < 0 ? 1 : -1)
@@ -224,7 +269,7 @@ function Home({ onOpen, favorites, toggleFavorite }) {
           const z = 180 - abs * 30
           const opacity = Math.max(0.62, 1 - abs * 0.10)
           return <div key={category} className="monolith-wrap" style={{ left: '50%', top: '51%', transform: `translate3d(calc(-50% + ${x}px), calc(-50% + ${abs * 10}px), ${z}px) scale(${scale})`, opacity, zIndex: 20 - abs }}>
-            <button className="monolith-button" onClick={() => onOpen(category)} aria-label={`Open ${category}`}>
+            <button className="monolith-button" onClick={(event) => { event.stopPropagation(); onOpen(category) }} aria-label={`Open ${category}`}>
               <div className="monolith" style={{ '--accent': categoryInfo[category].accent }}>
                 <img src={categoryInfo[category].hero} alt={`${category} universe`} draggable="false" onError={(event) => event.currentTarget.classList.add('broken')} />
                 <div className="monolith-fallback">{category[0]}</div>
@@ -353,12 +398,12 @@ export default function App() {
   const openCategory = (category) => setShatter({ image: categoryInfo[category].hero, category })
   const finishShatter = () => { if (shatter) { go(`#/category/${encodeURIComponent(shatter.category)}`); setShatter(null) } }
 
-  return <div className="fv-app"><div className="space-bg" /><div className="space-stars" /><div className="space-glow" /><Nav route={route} favoritesCount={favorites.length} /><div className="fv-content">
+  return <div className="fv-app"><div className="space-bg" /><div className="space-stars" /><div className="space-glow" /><Nav route={route} favoritesCount={favorites.length} /><div key={`${route.page}-${route.category || ''}-${route.id || ''}`} className="fv-content page-transition">
     {route.page === 'home' && <Home onOpen={openCategory} favorites={favorites} toggleFavorite={toggleFavorite} />}
     {route.page === 'category' && <CategoryPage category={route.category} favorites={favorites} toggleFavorite={toggleFavorite} />}
     {route.page === 'title' && <DetailPage category={route.category} id={route.id} favorites={favorites} toggleFavorite={toggleFavorite} />}
     {route.page === 'favorites' && <FavoritesPage favorites={favorites} toggleFavorite={toggleFavorite} />}
     {route.page === 'about' && <AboutPage />}
     {route.page === 'contact' && <ContactPage />}
-  </div>{shatter && <Shatter image={shatter.image} onDone={finishShatter} />}</div>
+  </div>{shatter && <Shatter image={shatter.image} category={shatter.category} onDone={finishShatter} />}</div>
 }
